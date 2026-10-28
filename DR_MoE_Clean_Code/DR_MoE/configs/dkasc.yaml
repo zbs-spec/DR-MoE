@@ -1,0 +1,29 @@
+seed: 42
+data:
+  aggregate: none
+  train_count: 1481
+  val_count: 165
+  train_ratio: 0.8111
+  val_ratio: 0.0904
+  smooth: true
+  lowess_frac: 0.1
+model:
+  input_length: 180
+  horizon: 1
+  dim: 256
+  heads: 8
+  global_patch: 48
+  global_stride: 16
+  local_patch: 16
+  local_stride: 8
+  top_k: 8
+  dropout: 0.1
+  d_state: 16
+  d_conv: 4
+  expand: 2
+training:
+  batch_size: 32
+  epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  patience: 10
